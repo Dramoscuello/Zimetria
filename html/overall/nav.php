@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.php"><span>Zimetria Foro</span></a>
+      <a class="navbar-brand" href="index.php"><span><?php echo APP_TITTLE ?></span></a>
     </div>
     <div class="navbar-collapse collapse">
       <div class="menu">

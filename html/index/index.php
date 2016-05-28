@@ -1,6 +1,6 @@
-<?php include('html/overall/header.php'); ?>
+<?php include(HTML_DIR . 'overall/header.php'); ?>
   <body>
-	<?php include('html/overall/nav.php'); ?>
+	<?php include(HTML_DIR . 'overall/nav.php'); ?>
 
 
 	<div class="container">
@@ -150,6 +150,6 @@
 		</div>
 	</div>
 
-	<?php include('html/overall/footer.php'); ?>
+	<?php include(HTML_DIR . 'overall/footer.php'); ?>
   </body>
 </html>

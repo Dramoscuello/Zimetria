@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 f-about">
-          <a href="index.html"><h1><span>e</span>Nno</h1></a>
+          <a href="#"><h1><?php echo APP_TITTLE ?></h1></a>
           <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Cras suscipit arcu libero
           vestibulum volutpat libero sollicitudin vitae Curabitur ac aliquam  consectetur adipiscing elit Cras suscipit arcu libero
           </p>
