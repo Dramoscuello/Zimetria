@@ -14,10 +14,10 @@
       <div class="menu">
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active"><a href="index.php">Home</a></li>
-          <li role="presentation"><a href="services.html">Posts</a></li>
+          <li role="presentation"><a href="#">Posts</a></li>
           <li role="presentation"><a href="javascript:void(0)" data-toggle="modal" data-target=".bs-example-modal-sm">Login</a></li>
           <li role="presentation"><a href="javascript:void(0)" data-toggle="modal" data-target=".bs-example-modal-lg">Register</a></li>
-          <li role="presentation"><a href="contact.html">Contact</a></li>
+          <li role="presentation"><a href="#">Contact</a></li>
         </ul>
       </div>
     </div>
