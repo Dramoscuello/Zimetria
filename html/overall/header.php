@@ -7,6 +7,7 @@
     <title><?php echo APP_TITTLE ?></title>
 
     <!-- Bootstrap -->
+    <base href="<?php APP_URL ?>">
     <link href="views/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="views/css/animate.css">
 	<link rel="stylesheet" href="views/css/font-awesome.min.css">
@@ -15,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="views/css/set1.css" />
 	<link href="views/css/overwrite.css" rel="stylesheet">
 	<link href="views/css/style.css" rel="stylesheet">
+  <script src="views/app/js/generales.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
