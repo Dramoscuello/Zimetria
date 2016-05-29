@@ -37,7 +37,7 @@
 
      <ol class="breadcrumb">
        <li><a href="?view=index"><i class="fa fa-tags"></i> Categorías</a></li>
-       <li><a class="btn btn btn-danger" href="?view=cuenta">GESTIONAR FOROS</a></li>
+       <li><a class="btn btn btn-danger" href="?view=configforos">GESTIONAR FOROS</a></li>
        <li><a class="btn btn btn-danger" href="?view=categorias">GESTIONAR CATEGORÍAS</a></li>
        <li><a class="btn btn btn-danger" href="?view=categorias&mode=add">CREAR CATEGORÍA</a></li>
      </ol>

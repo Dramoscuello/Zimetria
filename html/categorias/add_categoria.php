@@ -23,7 +23,7 @@
   ?>
 
 <div class="row container">
-   <div class="pull-right">
+   <!-- <div class="pull-right">
      <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active"><li class="mbr-navbar__item">
           <a class="mbr-buttons__btn btn btn-danger" href="?view=cuenta">GESTIONAR FOROS</a>
       </li></ul></div>
@@ -33,10 +33,13 @@
        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active"><li class="mbr-navbar__item">
            <a class="mbr-buttons__btn btn btn-danger active" href="?view=categorias&mode=add">CREAR CATEGORÍA</a>
        </li></ul></div>
-     </div>
+     </div> -->
 
     <ol class="breadcrumb">
       <li><a href="?view=index"><i class="fa fa-tags"></i> Categorías</a></li>
+      <li><a class="btn btn btn-danger" href="?view=cuenta">GESTIONAR FOROS</a></li>
+      <li><a class="btn btn btn-danger" href="?view=categorias">GESTIONAR CATEGORÍAS</a></li>
+      <li><a class="btn btn btn-danger" href="?view=categorias&mode=add">CREAR CATEGORÍA</a></li>
     </ol>
 </div>
 
@@ -56,8 +59,8 @@
               </div>
               <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
-                  <button type="reset" class="btn btn-default">Resetear</button>
-                  <button type="submit" class="btn btn-primary">Crear</button>
+                  <button type="reset" class="btn btn-danger">Resetear</button>
+                  <button type="submit" class="btn btn-danger">Crear</button>
                 </div>
               </div>
             </fieldset>

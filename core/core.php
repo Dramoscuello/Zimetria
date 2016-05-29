@@ -14,7 +14,9 @@ require('core/models/class.Conexion.php');
 require('core/bin/functions/Encrypt.php');
 require('core/bin/functions/Users.php');
 require('core/bin/functions/Categorias.php');
+require('core/bin/functions/Foros.php');
 
 $_users = Users();
 $_categorias = Categorias();
+$_foros = Foros();
  ?>
