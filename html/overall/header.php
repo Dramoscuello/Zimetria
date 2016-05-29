@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="views/css/set1.css" />
 	<link href="views/css/overwrite.css" rel="stylesheet">
 	<link href="views/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="views/app/css/format.css">
   <script src="views/app/js/generales.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
