@@ -15,11 +15,27 @@
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active"><a href="index.php">Home</a></li>
           <li role="presentation"><a href="#">Posts</a></li>
-          <li role="presentation"><a href="javascript:void(0)" data-toggle="modal" data-target=".bs-example-modal-sm">Login</a></li>
-          <li role="presentation"><a href="javascript:void(0)" data-toggle="modal" data-target=".bs-example-modal-lg">Register</a></li>
-          <li role="presentation"><a href="#">Contact</a></li>
+          <?php
+            if(!isset($_SESSION['app_id'])) {
+              echo '<li role="presentation"><a href="javascript:void(0)" data-toggle="modal" data-target=".bs-example-modal-sm">Login</a></li>
+              <li role="presentation"><a href="javascript:void(0)" data-toggle="modal" data-target=".bs-example-modal-lg">Register</a></li>';
+            }else{
+              echo '<li role="presentation"><a href="?view=perfil&id='.$_SESSION['app_id'].'">'. strtoupper($users[$_SESSION['app_id']]['user']) .'</a></li>
+              <li role="presentation"><a href="?view=cuenta">Cuenta</a></li>';
+            }
+           ?>
+
+
         </ul>
       </div>
     </div>
   </div>
 </nav>
+
+
+<?php
+if(!isset($_SESSION['app_id'])) {
+  include(HTML_DIR . 'public/login.html');
+  include(HTML_DIR . 'public/reg.html');
+}
+?>

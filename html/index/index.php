@@ -1,9 +1,6 @@
 <?php include(HTML_DIR . 'overall/header.php'); ?>
   <body>
 	<?php include(HTML_DIR . 'overall/nav.php'); ?>
-
-  <?php include(HTML_DIR . 'public/login.html'); ?>
-    <?php include(HTML_DIR . 'public/reg.html'); ?>
 	<div class="container">
 		<div class="row">
 			<div class="slider">
