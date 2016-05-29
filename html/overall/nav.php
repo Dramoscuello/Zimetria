@@ -20,8 +20,9 @@
               echo '<li role="presentation"><a href="javascript:void(0)" data-toggle="modal" data-target=".bs-example-modal-sm">Login</a></li>
               <li role="presentation"><a href="javascript:void(0)" data-toggle="modal" data-target=".bs-example-modal-lg">Register</a></li>';
             }else{
-              echo '<li role="presentation"><a href="?view=perfil&id='.$_SESSION['app_id'].'">'. strtoupper($users[$_SESSION['app_id']]['user']) .'</a></li>
-              <li role="presentation"><a href="?view=cuenta">Cuenta</a></li>';
+              echo '<li role="presentation"><a href="?view=perfil&id='.$_SESSION['app_id'].'">'. strtoupper($_users[$_SESSION['app_id']]['user']) .'</a></li>
+              <li role="presentation"><a href="?view=cuenta">Cuenta</a></li>
+              <li role="presentation"><a href="?view=logout">Salir</a></li>';
             }
            ?>
 

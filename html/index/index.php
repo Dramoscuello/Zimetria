@@ -19,6 +19,12 @@
   <div class="row container">
       <ol class="breadcrumb">
         <li><a href="?view=index"><i class="fa fa-home"></i> Inicio</a></li>
+        <?php
+          if(isset($_SESSION['app_id']) and $_users[$_SESSION['app_id']]['permisos'] >= 2) {
+            echo '<li><a href="#" class="btn btn-danger">Gestionar Foros</a></li>
+            <li><a href="?view=categorias" class="btn btn-danger">Gestionar Categorias</a></li>';
+          }
+        ?>
       </ol>
   </div>
 
