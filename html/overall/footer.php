@@ -1,5 +1,5 @@
 <footer>
-  <div class="inner-footer">
+  <!--<div class="inner-footer">
     <div class="container">
       <div class="row">
         <div class="col-md-4 f-about">
@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <div class="last-div">
