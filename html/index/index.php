@@ -29,61 +29,63 @@
   </div>
 
   <?php
+if (isset($_SESSION['app_id']) and $_users[$_SESSION['app_id']]) {
+  if(false != $_categorias) {
+    $prepare_sql = $db->prepare("SELECT id FROM foros WHERE id_categoria = ? ;");
+    $prepare_sql->bind_param('i',$id_categoria);
+    foreach($_categorias as $id_categoria => $array_categoria) {
+      $prepare_sql->execute();
+      $prepare_sql->bind_result($id_del_foro);
+      echo '<div class="row categorias_con_foros">
+        <div class="col-sm-12">
+            <div class="row titulo_categoria">'.$_categorias[$id_categoria]['nombre'].'</div>';
 
-if(false != $_categorias) {
-  $prepare_sql = $db->prepare("SELECT id FROM foros WHERE id_categoria = ? ;");
-  $prepare_sql->bind_param('i',$id_categoria);
-  foreach($_categorias as $id_categoria => $array_categoria) {
-    $prepare_sql->execute();
-    $prepare_sql->bind_result($id_del_foro);
-    echo '<div class="row categorias_con_foros">
-      <div class="col-sm-12">
-          <div class="row titulo_categoria">'.$_categorias[$id_categoria]['nombre'].'</div>';
+            while($prepare_sql->fetch()) {
 
-          while($prepare_sql->fetch()) {
+              if($_foros[$id_del_foro]['estado'] == 1) {
+                $extension = '.png';
+              } else {
+                $extension = '_bloqueado.png';
+              }
 
-            if($_foros[$id_del_foro]['estado'] == 1) {
-              $extension = '.png';
-            } else {
-              $extension = '_bloqueado.png';
+              echo '<div class="row foros">
+                <div class="col-md-1" style="height:50px;line-height: 37px;">
+                  <img src="views/app/images/foros/foro_leido'.$extension.'" />
+                </div>
+                <div class="col-md-7 puntitos" style="padding-left: 0px;">
+                  <a href="#">'.$_foros[$id_del_foro]['nombre'].'</a><br />
+                  '.$_foros[$id_del_foro]['descrip'].'
+                </div>
+                <div class="col-md-2 left_border" style="text-align: center;font-weight: bold;">
+                  '.$_foros[$id_del_foro]['cantidad_temas'].' Temas<br />
+                  '.$_foros[$id_del_foro]['cantidad_mensajes'].' Mensajes
+                </div>
+                <div class="col-md-2 left_border puntitos" style="line-height: 37px;">
+                  <a href="#">Ultimo mensaje acá texto largo</a>
+                </div>
+              </div>';
             }
 
-            echo '<div class="row foros">
-              <div class="col-md-1" style="height:50px;line-height: 37px;">
-                <img src="views/app/images/foros/foro_leido'.$extension.'" />
-              </div>
-              <div class="col-md-7 puntitos" style="padding-left: 0px;">
-                <a href="#">'.$_foros[$id_del_foro]['nombre'].'</a><br />
-                '.$_foros[$id_del_foro]['descrip'].'
-              </div>
-              <div class="col-md-2 left_border" style="text-align: center;font-weight: bold;">
-                '.$_foros[$id_del_foro]['cantidad_temas'].' Temas<br />
-                '.$_foros[$id_del_foro]['cantidad_mensajes'].' Mensajes
-              </div>
-              <div class="col-md-2 left_border puntitos" style="line-height: 37px;">
-                <a href="#">Ultimo mensaje acá texto largo</a>
-              </div>
-            </div>';
-          }
+      echo '</div>
+      </div>';
+    }
+    $prepare_sql->close();
 
-    echo '</div>
+  } else {
+    echo '<div class="row categorias_con_foros">
+      <div class="col-sm-12">
+          <div class="row titulo_categoria">'. APP_TITTLE . '</div>
+          <div class="row foros">
+            <div class="col-md-12" style="height:50px;line-height: 37px;">
+              No existe ninguna categoría
+            </div>
+          </div>
+      </div>
     </div>';
   }
-  $prepare_sql->close();
-
-} else {
-  echo '<div class="row categorias_con_foros">
-    <div class="col-sm-12">
-        <div class="row titulo_categoria">'. APP_TITLE . '</div>
-        <div class="row foros">
-          <div class="col-md-12" style="height:50px;line-height: 37px;">
-            No existe ninguna categoría
-          </div>
-        </div>
-    </div>
-  </div>';
+}else{
+  echo "<h2>Debes registrarte para poder ver los foros :)</h2>";
 }
-
 ?>
 
   </div>
