@@ -1,11 +1,14 @@
 function goLogin(){
-  var connect, form, response, result;
-  form = "variable=contenido";
+  var connect, form, response, result, user, pass, sesion;
+  user = __('username_login').value;
+  pass = __('pass_login').value;
+  sesion = __('check_login').checked ? true : false;
+  form = 'user=' + user + '&pass=' + pass + '&sesion=' + sesion;
   connect = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
   connect.onreadystatechange = function(){
       if (connect.readyState == 4 && connect.status == 200) {
           if (connect.responseText == 1) {
-            result = '<div class="alert alert-dismissible alert-succes">';
+            result = '<div class="alert alert-dismissible alert-success">';
             result += '<h4>Conectado!</h4>';
             result+=  '<p>Estamos redireccionandote...</p></div>';
             __('validador_login').innerHTML = result;
