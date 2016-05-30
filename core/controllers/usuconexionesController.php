@@ -1,3 +1,5 @@
 <?php
-  echo "Controlador creado";
- ?>
+
+    include(HTML_DIR . 'users/all_users.php');
+
+?>
