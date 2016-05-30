@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2016 a las 03:39:19
+-- Tiempo de generación: 30-05-2016 a las 17:50:53
 -- Versión del servidor: 5.7.9
 -- Versión de PHP: 5.6.16
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `conexiones` (
   `hora_up` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `user` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `conexiones`
@@ -67,7 +67,11 @@ CREATE TABLE IF NOT EXISTS `conexiones` (
 INSERT INTO `conexiones` (`id`, `fecha_up`, `hora_up`, `user`) VALUES
 (8, '30-05-2016', '02:55:23', 'dramoscuello'),
 (9, '30-05-2016', '03:32:52', 'cemacu'),
-(10, '30-05-2016', '03:37:27', 'dramoscuello2');
+(10, '30-05-2016', '03:37:27', 'dramoscuello2'),
+(11, '30-05-2016', '04:03:25', 'dramoscuello'),
+(12, '30-05-2016', '04:28:43', 'dramoscuello'),
+(13, '30-05-2016', '15:16:42', 'dramoscuello'),
+(14, '30-05-2016', '17:25:07', 'dramoscuello');
 
 -- --------------------------------------------------------
 
