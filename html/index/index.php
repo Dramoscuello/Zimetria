@@ -84,7 +84,7 @@ if (isset($_SESSION['app_id']) and $_users[$_SESSION['app_id']]) {
     </div>';
   }
 }else{
-  echo "<h2>Debes registrarte para poder ver los foros :)</h2>";
+  echo "<h2>Debes iniciar sesión para poder ver los foros :)</h2>";
 }
 ?>
 

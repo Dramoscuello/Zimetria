@@ -7,7 +7,6 @@
     <title><?php echo APP_TITTLE ?></title>
 
     <!-- Bootstrap -->
-    <base href="<?php APP_URL ?>">
     <link href="views/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="views/css/animate.css">
 	<link rel="stylesheet" href="views/css/font-awesome.min.css">
