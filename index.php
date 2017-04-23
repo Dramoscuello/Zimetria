@@ -9,5 +9,5 @@ if (isset($_GET['view'])) {
 }else {
   include('core/controllers/indexController.php');
 }
-
+//Comentario para probar ifttt
  ?>
